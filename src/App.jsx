@@ -5,14 +5,7 @@ import TaskList from "./components/TaskList.jsx";
 import StatusChart from "./components/StatusChart.jsx";
 import { STORAGE_KEY } from "./constants.js";
 
-function loadTasks() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : [];
-  } catch {
-    return [];
-  }
-}
+
 
 export default function App() {
   const [tasks, setTasks] = useState(loadTasks);
